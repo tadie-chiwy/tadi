@@ -1,0 +1,204 @@
+aa
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: "Poppins-Medium.ttf";
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+header{ul{display: none;}; display: flex; justify-content: space-between; align-items: center; margin: 20px 40px; 
+   h1{color: black;span{color: red;}font-style: italic;font-family: "Poppins-Regular.ttf";font-size: 64px;margin: 0 -11px;}
+   ul{display: none;}
+}
+.banner{
+    display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top:40px ; 
+    h2{color: red;font-size: 50px; }
+    h1{font-size: 40px;text-align: center;margin-top: 30px;}
+    p{font-size: x-large;color: red;margin-top: 30px;}
+    button{background-color: white;color: red;border: solid red 1px;width: 130px;height: 40px;margin-top: 30px;}
+}
+// about
+.about{
+    margin: 50px 0;
+   .col-md-6{
+    h6{color: red;margin-top: 20px;}
+    h4{color: black;span{border-bottom: solid red 6px;}font-size: 40px;margin-top: 20px;font-family: "Montserrat-Light.ttf";font-style: italic;}
+    p{font-size: larger;line-height: 30px;margin-top: 20px;}
+    button{background-color: white;color: red;width: 160px;height: 40px;border: solid red  1px;margin-top: 30px;}
+   }
+}
+// SERVICES
+.services{ margin: 60px 0;
+    h2{color:  black;font-size: 40px;text-align: center;font-family: "Montserrat-Light.ttf";font-style: italic;}
+   .row{
+    .col-md-3{margin: 30px 0px ; line-height: 40px; border-bottom: solid rgba(255, 51, 0, 0.685) 1px;  text-align: center;
+        h5{font-size: x-large;text-decoration: underline;}
+    
+    }
+   }
+}
+.portfolio{
+    h2{font-size: 40px;text-align: center;font-family: "Montserrat-Light.ttf";font-style: italic;}
+    .row{
+        .col-md-3{margin: 30px 0;}
+        .col-md-5{margin: 30px 0;}
+        .col-md-4{margin: 30px 0;}
+    }
+}
+.contact{ text-align: center;
+    h2{font-size: 40px;text-align: center;font-family: "Montserrat-Light.ttf";font-style: italic;}
+    .col-md-7{
+        h6{font-size: xx-large;margin-top: 30px;text-align: start;}
+        form{margin: 30px 0;
+            input{width: 96%;height: 52px;}
+            #mess{height: 90px;}
+        }
+       
+    }
+    .col-md-5{ line-height: 30px;
+        h5{font-size: 30px;}
+        a{color: black;text-decoration: none;margin-left: -10px;}
+        .ss{
+            display: flex;
+            .a{margin: 30px  ;a{font-size: xx-large;}}
+        }
+  
+}
+}   
+
+
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {  
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px)   { 
+    header{
+        h1{font-size: xx-large;color: black}
+
+        ul{display: block; display: flex; justify-content: space-between; 
+            li{ a{color: black;margin: 0 40px;font-weight: bold;font-size: larger;text-decoration: none;}
+        }
+        }
+        ul{
+            li{a:hover{color: red;transition: 2s;text-decoration: underline;}}
+        }
+    }
+    // banner
+    .banner{
+        margin-top: 100px; margin-bottom: 40px; height: 60vh;
+    }
+    .about{margin: 70px 0;
+        .col-md-6{
+            img{width: 50%;margin-top: 60px;border-bottom: solid red 6px ;border-right: solid red 6px ;margin-left: 40px;}
+        }
+    }
+    // services
+    .services{
+        .row{ display: flex; flex-direction: row; margin-left: 50px;
+            .col-md-3{
+                border: solid red 1px; margin: 30px 20px;
+
+            }
+        }
+    }
+    .contact{ margin: 50px 0;
+        .col-md-7{ margin-top: 30px;
+            form{
+                #mess{height: 120px;}
+                input{margin: 5px 0;}
+            }
+            button{width: 120px; background-color: white;height: 40px;color: red;border: solid 1px red;}
+        }
+        .col-md-5{ margin-top: 50px; line-height: 40px;
+            .ss{margin-left: 40px;}
+        }
+    }
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+
+}
