@@ -49,16 +49,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-header{ul{display: none;}; display: flex; justify-content: space-between; align-items: center; margin: 20px 40px; 
-   h1{color: black;span{color: red;}font-style: italic;font-family: "Poppins-Regular.ttf";font-size: 64px;margin: 0 -11px;}
-   ul{display: none;}
+
+header{
+    display: flex;justify-content: space-between; background-color: black; width: 100vw; height: 100px;
+    .links{display: none;}
+    h1{span{color: red;}color: white;font-size: xx-large;font-style: italic;margin:  50px 30px;}
 }
+// banner
 .banner{
-    display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top:40px ; 
-    h2{color: red;font-size: 50px; }
-    h1{font-size: 40px;text-align: center;margin-top: 30px;}
-    p{font-size: x-large;color: red;margin-top: 30px;}
-    button{background-color: white;color: red;border: solid red 1px;width: 130px;height: 40px;margin-top: 30px;}
+    .video{background-color: black;height: 80vh;
+        video{width: 100vw;height: 80vh;}
+    }
+    h2{position: absolute;top :30%;text-align: center;color: red;font-size: 40px;left: 25%;}
+    h1{position: absolute;top: 40%;left: 15%;font-size: 40px;color: white;}
+    p{position: absolute;top: 55%;left: 15%;font-size: 20px;color:red;}
+    .hire{background-color: black;width: 120px;height: 60px;border: solid red 1px;position: absolute;top:70%;left:30%;
+    a{text-align: center;color:red;text-decoration:none;font-size: x-large;margin-top: 10px;display: flex;justify-content: center;align-items: center;}}
 }
 // about
 .about{
@@ -141,22 +147,25 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px)   { 
-    header{
-        h1{font-size: xx-large;color: black}
-
-        ul{display: block; display: flex; justify-content: space-between; 
-            li{ a{color: black;margin: 0 40px;font-weight: bold;font-size: larger;text-decoration: none;}
-        }
-        }
-        ul{
-            li{a:hover{color: red;transition: 2s;text-decoration: underline;}}
+    header{display: flex;align-items: center; width: 100vw;
+        .links{display: block; margin-right: 60px;
+            a{color: white;text-decoration: none;margin: 0 30px;font-size: large;}
+            a:hover{color: red;transition: 3s;}
         }
     }
+   
+   
     // banner
     .banner{
-        margin-top: 100px; margin-bottom: 40px; height: 60vh;
+        display: flex;justify-content: center;align-items: center;
+        video{width: 100vw;}
+        h2{left: 45%;}
+        h1{left: 35%;}
+        p{left:43%}
+        .hire{margin-left: 18%;width: 170px;}
     }
-    .about{margin: 70px 0;
+  
+    .about{margin: 70px 0; margin-top: 150px;
         .col-md-6{
             img{width: 50%;margin-top: 60px;border-bottom: solid red 6px ;border-right: solid red 6px ;margin-left: 40px;}
         }

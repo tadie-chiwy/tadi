@@ -53,54 +53,71 @@ table {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 20px 40px;
+  background-color: black;
+  width: 100vw;
+  height: 100px;
 }
-header ul {
+header .links {
   display: none;
 }
 header h1 {
-  color: black;
+  color: white;
+  font-size: xx-large;
   font-style: italic;
-  font-family: "Poppins-Regular.ttf";
-  font-size: 64px;
-  margin: 0 -11px;
+  margin: 50px 30px;
 }
 header h1 span {
   color: red;
 }
-header ul {
-  display: none;
-}
 
-.banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
+.banner .video {
+  background-color: black;
+  height: 80vh;
+}
+.banner .video video {
+  width: 100vw;
+  height: 80vh;
 }
 .banner h2 {
+  position: absolute;
+  top: 30%;
+  text-align: center;
   color: red;
-  font-size: 50px;
+  font-size: 40px;
+  left: 25%;
 }
 .banner h1 {
+  position: absolute;
+  top: 40%;
+  left: 15%;
   font-size: 40px;
-  text-align: center;
-  margin-top: 30px;
+  color: white;
 }
 .banner p {
-  font-size: x-large;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  font-size: 20px;
   color: red;
-  margin-top: 30px;
 }
-.banner button {
-  background-color: white;
-  color: red;
+.banner .hire {
+  background-color: black;
+  width: 120px;
+  height: 60px;
   border: solid red 1px;
-  width: 130px;
-  height: 40px;
-  margin-top: 30px;
+  position: absolute;
+  top: 70%;
+  left: 30%;
+}
+.banner .hire a {
+  text-align: center;
+  color: red;
+  text-decoration: none;
+  font-size: x-large;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about {
@@ -233,34 +250,49 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  header h1 {
-    font-size: xx-large;
-    color: black;
-  }
-  header ul {
-    display: block;
+  header {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
   }
-  header ul li a {
-    color: black;
-    margin: 0 40px;
-    font-weight: bold;
-    font-size: larger;
+  header .links {
+    display: block;
+    margin-right: 60px;
+  }
+  header .links a {
+    color: white;
     text-decoration: none;
+    margin: 0 30px;
+    font-size: large;
   }
-  header ul li a:hover {
+  header .links a:hover {
     color: red;
-    transition: 2s;
-    text-decoration: underline;
+    transition: 3s;
   }
   .banner {
-    margin-top: 100px;
-    margin-bottom: 40px;
-    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner video {
+    width: 100vw;
+  }
+  .banner h2 {
+    left: 45%;
+  }
+  .banner h1 {
+    left: 35%;
+  }
+  .banner p {
+    left: 43%;
+  }
+  .banner .hire {
+    margin-left: 18%;
+    width: 170px;
   }
   .about {
     margin: 70px 0;
+    margin-top: 150px;
   }
   .about .col-md-6 img {
     width: 50%;
